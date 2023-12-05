@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+input {
+  font-family: Consolas, monospace;
+}
+
+textarea,
+input,
+input::placeholder,
+p {
+  color: green;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  max-height: 100dvh;
+  overflow-y: scroll;
+  padding: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+div::-webkit-scrollbar {
+  width: 4px;
+}
+
+div::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: green;
+  border-radius: 10px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background: lightgreen;
+}
+
+.console-textarea {
+  width: 100%;
+  font-size: 16px;
+}
+
+.console-textarea:before {
+  content: ">";
+}
+
+.logo {
+  font-size: clamp(4px, 1vw, 16px);
+  resize: none;
+  width: 100%;
+}
+
+.pre-symbol {
+  color: green;
+  font-size: 16px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.console-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.console-output {
+  overflow-y: scroll;
+}
+
+.console-output > * {
+  margin-bottom: 10px;
+}
